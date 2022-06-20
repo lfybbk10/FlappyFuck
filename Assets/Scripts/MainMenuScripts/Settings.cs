@@ -14,6 +14,7 @@ public class Settings : MonoBehaviour
 
     private void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
         difficults = Resources.LoadAll<DifficultyInfo>("");
         currentDifficult = difficults.Where(x=>x.name.Equals("Easy")).First();
     }
