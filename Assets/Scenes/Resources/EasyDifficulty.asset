@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: EasyDifficulty
   m_EditorClassIdentifier: 
   _name: Easy
-  _speed: 8
-  _timeToChangeSpeed: 9
-  _distToSpawnBarrier: 0
+  _speed: 6
+  _timeToChangeSpeed: 11
+  _distToSpawnBarrier: 8

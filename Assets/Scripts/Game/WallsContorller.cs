@@ -14,7 +14,7 @@ public class WallsContorller : MonoBehaviour
    
    private Settings settings;
 
-   private float speed;
+   public float speed;
    private float speedChangeTimer = 0;
 
    private void Start()
@@ -41,7 +41,7 @@ public class WallsContorller : MonoBehaviour
       wallsRigidBody.velocity = Vector2.left * speed;
       nextWallsRigidBody.velocity = Vector2.left * speed;
 
-      if (walls.transform.position.x <= -3.4f * 6)
+      if (walls.transform.position.x < -3.425f * 6)
       {
          Destroy(walls);
          

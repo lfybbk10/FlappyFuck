@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: MidDifficulty
   m_EditorClassIdentifier: 
   _name: Mid
-  _speed: 12
-  _timeToChangeSpeed: 4
-  _distToSpawnBarrier: 0
+  _speed: 9
+  _timeToChangeSpeed: 8
+  _distToSpawnBarrier: 7

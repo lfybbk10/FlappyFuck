@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     {
         gameTime += Time.fixedTime;
         
-        if (gameTime > 1.5f)
+        if (gameTime > 2f)
             playerRigidbody2D.gravityScale = 1f;
         
         if (isMouseDown)

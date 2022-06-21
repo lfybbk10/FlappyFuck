@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: HardDifficulty
   m_EditorClassIdentifier: 
   _name: Hard
-  _speed: 10
-  _timeToChangeSpeed: 7
-  _distToSpawnBarrier: 0
+  _speed: 12
+  _timeToChangeSpeed: 6
+  _distToSpawnBarrier: 10
