@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
+    
     [SerializeField] private GameObject playerPrefab;
     private bool isMouseDown;
     private Rigidbody2D playerRigidbody2D;
@@ -28,14 +29,16 @@ public class PlayerController : MonoBehaviour, IPointerDownHandler, IPointerUpHa
 
     private void Update()
     {
-        gameTime += Time.fixedTime;
+        gameTime += Time.deltaTime;
         
-        if (gameTime > 2f)
+        if (gameTime > 1.5f && playerRigidbody2D != null)
             playerRigidbody2D.gravityScale = 1f;
         
-        if (isMouseDown)
+        if (isMouseDown && gameTime > 1.5f && playerRigidbody2D != null)
         {
-            playerRigidbody2D.AddForce(Vector2.up * 3f);
+            playerRigidbody2D.AddForce(Vector2.up * 3.2f);
         }
     }
+
+    
 }

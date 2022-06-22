@@ -27,6 +27,7 @@ public class BarrierPool : MonoBehaviour
         spawnedBarriers = new List<GameObject>();
         minHeight = (int) (wallsPrefab.transform.position.y - wallsPrefab.GetComponent<RectTransform>().rect.height / 100 * 1.3) - 1;
         maxHeight = (int) (wallsPrefab.transform.position.y + wallsPrefab.GetComponent<RectTransform>().rect.height / 100 * 2.25) - 1;
+        
         PoolManager.WarmPool(barrierPrefab, 20);
         speed = wallsContorller.speed;
         Random random = new Random();

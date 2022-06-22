@@ -10,7 +10,6 @@ public class Settings : MonoBehaviour
 {
     private DifficultyInfo[] difficults;
     public DifficultyInfo currentDifficult;
-    [SerializeField] private TextMeshProUGUI currentDiffText;
 
     private void Start()
     {
@@ -22,21 +21,5 @@ public class Settings : MonoBehaviour
     public void changeDiff(string diff)
     {
         currentDifficult = difficults.Where(x=>x.name.Equals(diff)).First();
-        currentDiffText.SetText($"Текущая сложность: {translateText()}");
-    }
-
-    private string translateText()
-    {
-        switch (currentDifficult.name)
-        {
-            case "Easy":
-                return "Лёгкий";
-            case "Mid":
-                return "Средний";
-            case "Hard":
-                return "Сложный";
-            default:
-                return "хуёво";
-        }
     }
 }
