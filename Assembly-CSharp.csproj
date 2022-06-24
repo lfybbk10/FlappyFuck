@@ -52,7 +52,6 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scenes\TempLoading.cs" />
      <Compile Include="Assets\Scripts\MainMenuScripts\Settings.cs" />
      <Compile Include="Assets\Scripts\PoolScripts\PoolManager.cs" />
      <Compile Include="Assets\Scripts\Game\CheckPlayerCollision.cs" />

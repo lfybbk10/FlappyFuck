@@ -24,7 +24,6 @@ namespace Game
             SceneManager.LoadScene("GameScene");
         }
 
-    
         public void ChangeDifficulty()
         {
             endMenuButtons.SetActive(false);

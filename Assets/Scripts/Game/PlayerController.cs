@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         
         if (isMouseDown && gameTime > 1.5f && playerRigidbody2D != null)
         {
-            playerRigidbody2D.AddForce(Vector2.up * 3.2f);
+            playerRigidbody2D.velocity = Vector2.up * 3.2f;
         }
     }
 
