@@ -15,4 +15,4 @@ MonoBehaviour:
   _name: Hard
   _speed: 12
   _timeToChangeSpeed: 6
-  _distToSpawnBarrier: 10
+  _distToSpawnBarrier: 12
