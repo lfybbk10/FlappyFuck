@@ -45,7 +45,15 @@ public class BarrierPool : MonoBehaviour
     private void Update()
     {
         Random random = new Random();
-        
+        if (speed != wallsContorller.speed)
+        {
+            speed = wallsContorller.speed;
+            foreach (var barrier in spawnedBarriers)
+            {
+                barrier.GetComponent<Rigidbody2D>().velocity = Vector2.left * speed;
+            }
+        }
+
         foreach (var barrier in spawnedBarriers)
         {
             if (barrier.transform.position.x < -12.4f - barrierPrefabRectTransform.rect.width / 100)

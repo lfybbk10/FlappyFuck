@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Hard
   _speed: 12
-  _timeToChangeSpeed: 6
+  _timeToChangeSpeed: 10
   _distToSpawnBarrier: 12

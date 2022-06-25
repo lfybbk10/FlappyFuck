@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class WallsContorller : MonoBehaviour
@@ -36,6 +37,7 @@ public class WallsContorller : MonoBehaviour
       {
          speedChangeTimer = 0;
          speed += 1.5f;
+         speed = Mathf.Clamp(speed, 0, 60);
       }
       
       wallsRigidBody.velocity = Vector2.left * speed;
@@ -43,12 +45,14 @@ public class WallsContorller : MonoBehaviour
 
       if (walls.transform.position.x < -3.425f * 6)
       {
+         float lastX = walls.transform.position.x;
+         float lol = lastX - (-3.425f * 6);
          Destroy(walls);
          
          walls = nextWalls;
          wallsRigidBody = nextWallsRigidBody;
          
-         nextWalls = Instantiate(wallsPrefab, new Vector3(-3.4f*-4, 0, 9), Quaternion.identity);
+         nextWalls = Instantiate(wallsPrefab, new Vector3(-3.4f*-4 + lol,0, 9), Quaternion.identity);
          nextWallsRigidBody = nextWalls.GetComponent<Rigidbody2D>();
       }
    }
